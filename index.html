@@ -3,64 +3,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Estates 365 LTD</title>
+<title>Estates 365 LTD | Property Services</title>
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    color: #222;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #1f2933;
+    background: #f5f7fa;
+    line-height: 1.6;
 }
 
 header {
-    background: #0b1f3a;
+    min-height: 90vh;
+    background:
+        linear-gradient(rgba(5, 20, 40, 0.75), rgba(5, 20, 40, 0.75)),
+        url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
     color: white;
+    display: flex;
+    align-items: center;
     text-align: center;
-    padding: 70px 20px;
+    padding: 20px;
 }
 
-header h1 {
-    font-size: 42px;
+.hero {
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 56px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #c9a227;
+    color: white;
+    padding: 15px 32px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
 }
 
 nav {
-    background: #102f57;
-    padding: 15px;
+    background: #071527;
+    padding: 16px;
     text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
+    margin: 0 18px;
+    font-weight: 600;
 }
 
 section {
-    max-width: 1100px;
+    max-width: 1150px;
     margin: auto;
-    padding: 50px 20px;
+    padding: 70px 20px;
 }
 
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #071527;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+    color: #56616f;
+}
+
+.about-box {
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .card {
-    flex: 1;
-    min-width: 250px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card h3 {
+    color: #071527;
+    margin-top: 0;
+}
+
+.why {
+    background: #071527;
+    color: white;
+    border-radius: 20px;
+    padding: 50px;
+    text-align: center;
+}
+
+.why h2 {
+    color: white;
+}
+
+.contact-box {
+    background: white;
+    border-radius: 20px;
+    padding: 45px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.contact-box a {
+    color: #071527;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 footer {
-    background: #0b1f3a;
+    background: #071527;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
+}
+
+@media (max-width: 850px) {
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
 }
 </style>
 </head>
@@ -68,52 +182,97 @@ footer {
 <body>
 
 <header>
-    <h1>Estates 365 LTD</h1>
-    <p>Professional Property Services - Buy, Sell & Rent</p>
+    <div class="hero">
+        <h1>Estates 365 LTD</h1>
+        <p>Professional Property Services for Buying, Selling and Renting Homes</p>
+        <a href="#contact" class="btn">Contact Us Today</a>
+    </div>
 </header>
 
 <nav>
     <a href="#about">About</a>
     <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <section id="about">
-    <h2>About Us</h2>
-    <p>
-        Estates 365 LTD provides professional property services for buyers,
-        sellers, landlords and tenants throughout the United Kingdom.
+    <h2>About Estates 365 LTD</h2>
+    <p class="subtitle">
+        A professional property company helping clients make confident property decisions.
     </p>
+
+    <div class="about-box">
+        <p>
+            Estates 365 LTD provides reliable and professional property services for buyers,
+            sellers, landlords and tenants. We aim to make the property process simple,
+            clear and stress-free from the first enquiry to completion.
+        </p>
+
+        <p>
+            Whether you are looking to sell your home, find tenants, rent a property,
+            or search for your next investment opportunity, our client-focused approach
+            ensures you receive professional support at every stage.
+        </p>
+    </div>
 </section>
 
 <section id="services">
     <h2>Our Services</h2>
+    <p class="subtitle">
+        We offer property solutions tailored to homeowners, landlords, tenants and investors.
+    </p>
 
-    <div class="cards">
+    <div class="grid">
         <div class="card">
-            <h3>Property Sales</h3>
-            <p>Professional support for selling residential and investment properties.</p>
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80">
+            <div class="card-content">
+                <h3>Property Sales</h3>
+                <p>Professional support for selling residential and investment properties with clear guidance and effective marketing.</p>
+            </div>
         </div>
 
         <div class="card">
-            <h3>Property Rentals</h3>
-            <p>Helping landlords and tenants find the right property solutions.</p>
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80">
+            <div class="card-content">
+                <h3>Property Rentals</h3>
+                <p>Helping landlords and tenants connect through a smooth, professional and reliable rental process.</p>
+            </div>
         </div>
 
         <div class="card">
-            <h3>Property Search</h3>
-            <p>Helping buyers and tenants find their ideal property.</p>
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80">
+            <div class="card-content">
+                <h3>Property Search</h3>
+                <p>Helping buyers and tenants find the right property to match their lifestyle, budget and requirements.</p>
+            </div>
         </div>
+    </div>
+</section>
+
+<section id="why">
+    <div class="why">
+        <h2>Why Choose Estates 365 LTD?</h2>
+        <p>
+            We believe in honest communication, professional service and a personal approach.
+            Our goal is to make property transactions easier, clearer and more efficient
+            for every client.
+        </p>
     </div>
 </section>
 
 <section id="contact">
     <h2>Contact Us</h2>
+    <p class="subtitle">
+        Get in touch today to discuss your property needs.
+    </p>
 
-    <p><strong>Company:</strong> Estates 365 LTD</p>
-    <p><strong>Phone:</strong> 07424 667004</p>
-    <p><strong>Email:</strong> info@salebuyrent.co.uk</p>
-    <p><strong>Website:</strong> salebuyrent.co.uk</p>
+    <div class="contact-box">
+        <p><strong>Company:</strong> Estates 365 LTD</p>
+        <p><strong>Phone:</strong> <a href="tel:07424667004">07424 667004</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@salebuyrent.co.uk">info@salebuyrent.co.uk</a></p>
+        <p><strong>Website:</strong> www.salebuyrent.co.uk</p>
+    </div>
 </section>
 
 <footer>
